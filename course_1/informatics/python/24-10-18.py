@@ -1,0 +1,113 @@
+import math
+import os
+
+def triangle_type():
+    clear()
+    a, b, c = [int(input(f"Введите сторону {sides}: ")) for sides in "abc"]
+
+    all = [a, b, c]
+    hypotenuse = max(all)
+    all.remove(hypotenuse)
+
+    if a < b + c and b < a + c and c < a + b:
+        if a == b == c:
+            print("Треугольник равносторонний.")
+        elif a == b or b == c or c == a:
+            print("Треугольник равнобедренный.")
+        elif (hypotenuse**2 == all[0]**2 + all[1]**2):
+            print("Треугольник прямоугольный.")
+        else:
+            print("Треугольник не удовлетворяет ни одному из вариантов.")
+    else:
+        print("Такого треугольника не существует.")
+    input("Нажмите ENTER чтобы продолжить...")
+
+def dragon_eyes_heads():
+    clear()
+    # формула для до 101 др: E = (HS=(H+(Y*3))) * 2
+    # формула для с 101 др: E = HS=((H+((Y-100)*2))+(H+(100*3))) * 2
+    # E = глаза
+    # Y = введённое кол-во лет
+    # H = кол-во голов с рождения
+    # HS = кол-во голов сейчас
+    years = int(input("Сколько лет вашему дракону?: "))
+    base_heads = int(input("Сколько голов у вашего дракона с рождения?: "))
+
+    if years < 101:
+        heads = base_heads + years * 3
+    else:
+        heads = base_heads + 300 + (years - 100) * 2
+    
+    print(f"У дракона которому {years} год(а)/лет, {heads * 2} глаз(а) и {heads} голов(ы).")
+    input("Нажмите ENTER чтобы продолжить...")
+
+def quadratic_equation():
+    clear()
+    # формула дискриминанта D = b² - 4ac
+    # формула корней -b +- корень(D) / 2a
+    print("Стандартное квадратное уравнение имеет вид ax² + bx + c = 0")
+
+    a, b, c = [int(input(f"Введите коэффициент {coeff}: ")) for coeff in "abc"]
+    
+    d = b**2 - 4 * a * c
+
+    if d > 0:
+        roots = [(-b + math.sqrt(d)) / (2*a), (-b - math.sqrt(d)) / (2*a)]
+        print(f"Корни уравнения: x₁ = {roots[0]}, x₂ = {roots[1]}")
+    elif d == 0:
+        print(f"Уравнение имеет один корень: x = {-b / (2*a)}")
+    else:
+        print("Уравнение не имеет действительных корней.")
+    input("Нажмите ENTER чтобы продолжить...")
+
+def point_in_area_1():
+    clear()
+    x, y = [int(input(f"Введите координату {coord}: ")) for coord in "XY"]
+    if (x**2 + y**2 >= 2**2) and (x >= -2) and (y <= -x):
+        print("Точка принадлежит закрашенной области.")
+    else:
+        print("Точка не принадлежит закрашенной области.")
+    input("Нажмите ENTER чтобы продолжить...")
+
+def point_in_area_2():
+    clear()
+    x, y = [int(input(f"Введите координату {coord}: ")) for coord in "XY"]
+    distance = x**2 + y**2
+
+    if distance <= 1:
+        print("Точка принадлежит области A")
+    elif distance <= 16:
+        print("Точка принадлежит области B")
+    elif distance <= 49:
+        print("Точка принадлежит области C")
+    else:
+        print("Точка принадлежит области D")
+    input("Нажмите ENTER чтобы продолжить...")
+
+def start():
+    
+    programs = {
+        1: ("Тип треугольника", triangle_type),
+        2: ("Глаза и головы дракона", dragon_eyes_heads),
+        3: ("Квадратное уравнение", quadratic_equation),
+        4: ("Точка в области 1", point_in_area_1),
+        5: ("Точка в области 2", point_in_area_2)
+    }
+
+    while True:
+        clear()
+        
+        for number, (name, _) in programs.items():
+            print(f"{number}: {name}")
+        choice = int(input("Какую программу запустить? [1-5]: "))
+
+        
+        if choice in programs:
+            programs[choice][1]()
+        else:
+            print("Выберите существующую программу.")
+
+def clear():
+    os.system('cls' if os.name=='nt' else 'clear')
+
+start()
