@@ -1,0 +1,107 @@
+# =====================
+# Общие (для всех языков)
+# =====================
+# Системные файлы
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# =====================
+# C / C++
+# =====================
+# Компиляция
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.elf
+*.i
+*.ii
+*.s
+*.d
+
+# Каталоги сборки
+/build/
+/bin/
+/Debug/
+/Release/
+
+# =====================
+# C# / .NET / Visual Studio
+# =====================
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+*.dbmdl
+*.VC.db
+*.VC.VC.opendb
+
+# Бинарные файлы
+bin/
+obj/
+TestResults/
+_ReSharper*/
+*.ReSharper
+*.DotSettings.user
+*.userosscache
+*.suo
+*.userprefs
+
+# NuGet
+*.nupkg
+packages/
+# пакет-лок для dotnet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# =====================
+# Python
+# =====================
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Директории виртуальных окружений
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Пакеты
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Логи и временные файлы
+*.log
+*.pot
+*.mo
+*.pyc
+*.pyo
+*.cache/
+*.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage.*
+.pytest_cache/
+
+# IDE
+.idea/
+*.vscode/
