@@ -1,3 +1,9 @@
+// ╔═════════════════════════════════════════════════════════════════════════════╗
+//   Authors:        Diyor Haydarov [alyreniko]
+//   Date:           April 11, 2025
+//   License:        MIT License
+// ╚═════════════════════════════════════════════════════════════════════════════╝
+
 #include <strings.h>
 #include <time.h>
 #include <stdio.h>

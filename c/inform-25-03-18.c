@@ -1,3 +1,9 @@
+// ╔═════════════════════════════════════════════════════════════════════════════╗
+//   Authors:        Diyor Haydarov [alyreniko]
+//   Date:           March 18, 2025
+//   License:        MIT License
+// ╚═════════════════════════════════════════════════════════════════════════════╝
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -13,6 +19,7 @@ void printArray(int rows, int cols, int array[rows][cols]) {
 void reloadSrand(void) {
     srand((unsigned)time(NULL));
 }
+
 // # # # # # # #
 // # ЗАДАЧА  1 #
 // # # # # # # #
@@ -62,8 +69,6 @@ void task1() {
     printf("Max elem: %d\nStart coords: [%d, %d]\nEnd coords: [%d, %d]\n", max_val, max_i, max_j, min_i, min_j);
     printf("Min elem: %d\nStart coords: [%d, %d]\nEnd coords: [%d, %d]\n", min_val, min_i, min_j, max_i, max_j);
 }
-
-
 
 // # # # # # # #
 // # ЗАДАЧА  2 #
@@ -119,8 +124,6 @@ void task2() {
     printArray(7, 5, array);
 }
 
-
-
 // # # # # # # #
 // # ЗАДАЧА  3 #
 // # # # # # # #
@@ -172,14 +175,12 @@ void task3(void) {
     }
     printf("Mininimal elem: %d\nCoords: [%d, %d]\n", min, minRow+1, minCol+1);
 
-    swapRow(array, minRow, 0);    
-    swapCol(array, minCol, 9); 
+    swapRow(array, minRow, 0);
+    swapCol(array, minCol, 9);
 
     printf("Массив после:\n");
     printArray(10, 10, array);
 }
-
-
 
 int main(void) {
     task3();

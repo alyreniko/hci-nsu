@@ -1,3 +1,9 @@
+// ╔═════════════════════════════════════════════════════════════════════════════╗
+//   Authors:        Diyor Haydarov [alyreniko]
+//   Date:           March 11, 2025
+//   License:        MIT License
+// ╚═════════════════════════════════════════════════════════════════════════════╝
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -25,12 +31,10 @@ void task1b(void) {
     const int N = 10;
     int A[N], i;
     for (i = 0; i < N; i++ ) {
-        A[i] = rand()%50; 
+        A[i] = rand()%50;
         printf("A[%d] = %d; ", i, A[i]);
     }
 }
-
-
 
 // # # # # # # #
 // # ЗАДАЧА  2 #
@@ -62,8 +66,6 @@ void task2(void) {
     }
 }
 
-
-
 // # # # # # # #
 // # ЗАДАЧА  3 #
 // # # # # # # #
@@ -92,8 +94,6 @@ void task3(void) {
     }
     printf("\nСумма четных элементов: %d\n", sum);
 }
-
-
 
 int main(void) {
     // task1a();

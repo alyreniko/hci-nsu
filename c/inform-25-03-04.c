@@ -1,3 +1,9 @@
+// ╔═════════════════════════════════════════════════════════════════════════════╗
+//   Authors:        Diyor Haydarov [alyreniko]
+//   Date:           March 4, 2025
+//   License:        MIT License
+// ╚═════════════════════════════════════════════════════════════════════════════╝
+
 #include <stdio.h>
 #include <math.h>
 
@@ -31,9 +37,6 @@ void task1(void) {
     printf("%d\n", m);
 }
 
-
-
-
 // # # # # # # #
 // # ЗАДАЧА  2 #
 // # # # # # # #
@@ -52,9 +55,9 @@ void task2(void) {
     int m;
     int count = 1;
     int num = 1;
-    
+
     scanf("%d", &m);
-    
+
     while (1) {
         if (is_hamming(num)) {
             if (num > m) {
@@ -67,8 +70,6 @@ void task2(void) {
         num++;
     }
 }
-
-
 
 // # # # # # # #
 // # ЗАДАЧА  3 #
@@ -83,8 +84,6 @@ void task3(void) {
     }
     printf("%.2f", sum);
 }
-
-
 
 // # # # # # # #
 // # ЗАДАЧА  4 #
