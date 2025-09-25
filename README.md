@@ -267,7 +267,7 @@
 
 ## 📂 Отдельные репозитории
 
-### 🔹 [pong_pygame](https://github.com/alyreniko/pong_pygame)
+### 🔹 [Pong на Pygame](https://github.com/alyreniko/pong-pygame)
 * 🗓️ **Дата:** 2024-09-19
 * 📚 **Дисциплина:** Прикладная информатика
 * 📝 **Описание:**
